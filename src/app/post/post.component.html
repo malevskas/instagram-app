@@ -1,0 +1,63 @@
+<div>
+    <div class="post"  style="background-color: pink;">
+        <article
+            style="display:flex; flex-direction: column; margin-bottom:60px">
+            <header class="post-header"
+                style="padding:16px;   display:flex; flex-direction: row; align-items: center; position:relative">
+                <div style="height:32px; width:32px">
+                    <img style="border-radius: 50%; width:100%; height: 100%" src="{{imgProfile}}">
+                </div>
+                <div style="margin-left:14px">
+                    <div>The 1975</div>
+                    <div>{{location}}</div>
+
+                </div>
+            </header>
+            <div style="width:600px; height:600px;border-bottom: 1px solid black;">
+                <img style="width:100%; height:100%"
+                    src="{{imgPost}}">
+            </div>
+            <div style="margin-top:4px">
+                <div style=" padding:16px 16px 0 5px;display:flex; flex-direction: row;">
+                    <span>
+
+                        <button (click)="this.changeLikeStatus()" style="background:0 0; border: 0">
+                            <img *ngIf="this.isLiked" style="height: 20px; width: 20px;" src="https://www.pngkit.com/png/full/0-8948_black-heart-png-clipart-image-free-clipart-black.png?fbclid=IwAR2oFPsXYXnOp_e2zA99W7fpnHmmKfCwpmIjUT5uSm58yqJBcjCiGQFdsoY">
+                            
+                            <img *ngIf="!this.isLiked" style="height: 20px; width: 20px;" src="https://cdn.onlinewebfonts.com/svg/img_293481.png?fbclid=IwAR2NOBw8fiNDrM8XJQkaaKLPsVvpdVpaZArEm87lJ95B8wNiLXWq1_96rz4">
+                        </button>
+                    </span>
+                    <div style="margin-bottom:4px; padding-left:16px"> {{ numLikes }} likes </div>
+                </div>
+                <div>
+
+                </div>
+                <div style="margin-bottom:4px; padding-left:16px"> {{ postOwner }} {{ postDescription }} </div>
+                <div style=" margin-bottom:4px; padding-left:16px" *ngFor="let comment of comments; index as i">
+                  <strong>You:</strong>  {{comment}}
+                </div>
+                <form >
+                <div style="padding-left:16px; min-height: 56px; display:flex; border-top:1px solid black; border-radius:4px; margin-top:4px;">
+                  <textarea [(ngModel)]="this.comment"  [ngModelOptions]="{standalone: true}" placeholder="Add a comment..." style="padding-top:25px;font-style: italic; outline:0; flex-grow:1; background:0 0; border: 0; resize:none
+            "></textarea>
+                    <button (click)="this.addComment()" style="display:inline; padding:0; position:relative; color:black; background:pink;
+           
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            font-weight: 600;
+            padding: 5px 9px;
+            text-align: center;
+            text-overflow: ellipsis;
+            ">Post</button>
+       
+                </div>
+            </form>
+            </div>
+        </article>
+    </div>
+
+
+
+</div>

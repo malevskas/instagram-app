@@ -1,21 +1,24 @@
-<div class="container" style="background-color: black;"> 
-  <nav class="nav-bar" style="margin:0 auto; max-width:600px">
-    <div class="navigation-div" style="background-color: black;">
-        <div class="nav-item">
-            <img style="height: 40px; width: 100px; margin-top: 5px;"src="https://i.pinimg.com/originals/cd/cc/2a/cdcc2a29c3fa540f018e621556d64f45.png" alt="">
+<div class="container " style="background-color: black;">
+    <nav class="nav-bar" style="margin:0 auto; max-width:1000px">
+        <div class="navigation-div" style="background-color: black;">
+            <div class="nav-item">
+                <img style="height: 40px; width: 100px; margin-top: 5px;"src="https://i.pinimg.com/originals/cd/cc/2a/cdcc2a29c3fa540f018e621556d64f45.png?fbclid=IwAR1_U4Yx5RsciqPUQoBvtH2xArou_NYcExg8Ncmpib1LJDJ7lIK2NTPHO10" alt="">
+            </div>
+            <div class="search-bar nav-item" >
+                <form action="post" class="search-form">
+                    
+                    <input type="text" placeholder="Search" style="margin-top: 10px; margin-left: 70px; text-align: center; font-style: italic; font-weight: 700px;" autocapitalize="none" value="" class="search-input-field">
+                    
+                </form>
+            </div>
+            <div class="nav-item" style="display:flex; flex-direction: row;">
+                <div class="sides" style="margin-left: 160px;"><p>Tour</p></div>
+                <div class="sides" style="margin-left: 80px;"><p>Merch</p></div>
+            </div>
         </div>
-        <div class="search-bar nav-item" >
-            <form action="post" class="search-form">
-                
-                <input type="text" placeholder="Search" style="margin-top: 10px; text-align: center; font-style:italic; font-weight:700;" autocapitalize="none" value="" class="search-input-field">
-                
-            </form>
-        </div>
-        <div class="nav-item" style="display:flex; flex-direction: row;">
-          <div class="sides"><p>TOUR</p></div>
-          <div class="sides"><p>MERCH</p></div>
-        </div>
-    </div>
-  </nav>
-  
+    </nav>
+    <section style="margin:0 auto; max-width: 600px; padding-top:16px">
+    <app-post [imgProfile]=" 'https://i.pinimg.com/originals/cd/cc/2a/cdcc2a29c3fa540f018e621556d64f45.png?fbclid=IwAR1_U4Yx5RsciqPUQoBvtH2xArou_NYcExg8Ncmpib1LJDJ7lIK2NTPHO10' "
+              [location]="'UK'"></app-post>
+</section>
 </div>

@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to instagram-app-feit!');
+    expect(page.getTitleText()).toEqual('instagram-app app is running!');
   });
 
   afterEach(async () => {
