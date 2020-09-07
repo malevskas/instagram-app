@@ -10,10 +10,9 @@ export class PostComponent implements OnInit {
   @Input() numLikes: number;
   @Input() imgProfile: String;
   @Input() imgPost: String;
-  @Input() location: String;
+  @Input() location: String[];
   @Input() comments: String[];
-  @Input() postOwner: String;
-  @Input() postDescription: String;
+  @Input() postDescription: String[];
   @Input() isLiked: boolean;
   public comment: String;
   constructor() { 
